@@ -1,0 +1,20 @@
+Pip install Django
+This command has the Pip module determine what is the most current version of Django is and then once it has determined that
+it downloads the module and any other necesary components and then loads them into the system.
+
+Pip List
+This command lists all of the installed modules as well as what version has been installed. 
+
+Pip freeze
+This command displays the installed packages but in the requirements format.
+
+Pip freeze > requirements.txt
+This command does the same thing as the previous Pip freeze did but it puts the output into a file on the desktop called
+requirements.
+
+Pip show Django
+This command shows all of the detail information about the requested module. The information shown is things like name, version,
+a summary, modules home page, author, author's e-mail, license information, location where the module resides and the modules other requirements.
+
+Pip Search Flask
+Search for Python packages whose name or summary contains the requested search element.
