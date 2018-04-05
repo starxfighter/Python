@@ -1,0 +1,35 @@
+h1{
+    font-size: 36pt;
+    text-decoration: underline;
+    color: orange;
+    text-align: center;
+}
+
+h2{
+    font-size: 20pt;
+    color: green;
+    text-align: center;
+    border-color: black;
+    border-style: groove;
+    border-width: 2px;
+}
+
+h3{
+    font-size: 16pt;
+    color: blue;
+    text-align: center;
+    background-color: fuchsia
+}
+
+p{
+    font-size: 12pt;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-color: lightseagreen;
+}
+form{
+    font-size: 14pt;
+    text-align: center;
+    color: peru;
+}
