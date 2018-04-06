@@ -1,0 +1,31 @@
+h1{
+    font-size: 36pt;
+    text-align: center;
+    color: blue;
+}
+.email, .fname, .lname, .pwd, .pwdC{
+    font-size: 16pt;
+    display: inline-block;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.box{
+    font-size: 16pt;
+    display: block;
+    width: 600px;
+    margin-top: 10px;
+    margin-left: 20px
+}
+.button{
+    font-size: 16pt;
+    text-align: center;
+    margin-top:10px;
+    margin-left: 40px;
+}
+#messages{
+    font-size: 14pt;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: lightcoral;
+}
