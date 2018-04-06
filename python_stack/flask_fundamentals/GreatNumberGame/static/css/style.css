@@ -1,0 +1,37 @@
+h1{
+    font-size: 36pt;
+    text-align: center;
+    color: blue;
+}
+h4{
+    font-size: 18pt;
+    text-align: center;
+    color: lightblue;
+}
+.initial{
+    font-size: 14pt;
+    text-align: center;
+    background-color: none;
+}
+.response{
+    display: inline-block;
+    width: 649px;
+    margin-left: 600px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16pt;
+    background-color: red;
+}
+.win{
+    display: inline-block;
+    width: 649px;
+    margin-left: 600px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 16pt;
+    background-color: green;
+}
+h6{
+    font-size: 20pt;
+    font-weight: bold;
+}

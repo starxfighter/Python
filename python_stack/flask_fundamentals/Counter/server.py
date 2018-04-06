@@ -6,19 +6,14 @@ def index():
     session['count'] = 0
     return render_template("index.html")
 
-@app.route('/count', methods=['post'])
-def count():
+@app.route('/response', methods=['post'])
+def response():
     session['count'] = session['count'] + 1
     return redirect('/show')
 
-@app.route('/ninja1', methods=['post'])
-def ninja1():
+@app.route('/win', methods=['post'])
+def win():
     session['count'] = session['count'] + 2
-    return redirect('/show')
-
-@app.route('/ninja2', methods=['post'])
-def ninja2():
-    session['count'] = 0
     return redirect('/show')
 
 @app.route('/show')

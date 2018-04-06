@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" type="text/css" href="dojosurvey/static/css/reset.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css') }}"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Guessing Game</title>
+</head>
+    <body>
+      <h1>Welcome to the Great Number Game!</h1>
+      <h4>I am thinking of a number between 1 and 100</h4>
+      <h4>Take a guess</h4>
+      <form class='initial' action='/guess' method='post'>
+        Guess Here: <input type='text' name='guess'>
+        <input type='submit' value='guess'>
+      </form>
+      <!-- <p>{{session['response']}}</p> -->
+      {% if session['response'] == "Too Low" %} 
+        <form class='{{session['class']}}' action='/response' method='post'>
+            <h6> {{session['response']}}</h6>
+            <!-- <p>lose box</p> -->
+        </form>
+      {%endif%}
+      {% if session['response'] == "Too High" %} 
+        <form class='{{session['class']}}' action='/response' method='post'>
+            <h6> {{session['response']}}</h6>
+            <!-- <p>lose box</p> -->
+        </form>
+      {%endif%}
+      {% if session['response'] == 'win' %}
+        <form class='{{session['class']}}' action='/win' method='post'>
+            <h6> {{session['message']}}</h6>
+            <!-- <p>win box</p> -->
+            <input type='submit' value='Start Over'>
+        </form>
+      {%endif%}
+    </body>
+</html>
+
