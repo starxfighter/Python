@@ -1,0 +1,17 @@
+h1{
+    font-size: 36pt;
+    color: blue;
+    text-decoration: underline;
+    text-align: center;
+}
+h3{
+    font-size: 18pt;
+    color: red;
+    text-align: center;
+}
+input{
+    font-size: 16pt;
+    background-color: lightcoral;
+    margin-left: 910px;
+    margin-top: 40px;
+}
