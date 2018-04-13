@@ -1,0 +1,63 @@
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: green;
+}
+.big{
+    font-size: 24pt;
+}
+.small{
+    font-size: 16pt;
+}
+#addblock{
+    display: inline-block;
+    width: 40%;
+    height: 600px;
+    background-color: rosybrown;
+}
+#results{
+    display: inline-block;
+    width: 40%;
+    height: 600px;
+    background-color: lightseagreen;
+    vertical-align: top;
+}
+.color{
+    display: block;
+    font-size: 14pt;
+    margin-bottom: 15px;
+}
+.checkbox{
+    display: inline-block;
+    font-size: 14pt;
+    margin-left: 60px;
+}
+.wordbox{
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+h2{
+    text-align: center;
+}
+.button{
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 250px;
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: lightskyblue;
+}
+h4{
+    margin-left: 15px;
+}
+.radio{
+    margin-left: 48px;
+    margin-top: 10px;
+}
+.resultbox{
+    overflow: scroll;
+}
