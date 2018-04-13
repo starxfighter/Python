@@ -1,0 +1,84 @@
+h1{
+    font-size: 36pt;
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+#itemblock{
+    margin-left: 20px;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+
+}
+.headers{
+    display: block;
+
+}
+h2{
+    display: inline-block;
+    width: 320px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    margin-left: 5px;
+    text-align: center;
+}
+.action{
+    display: inline-block;
+    width: 500px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    margin-left: 5px;
+    text-align: center;
+}
+h3{
+    display: inline-block;
+    width: 320px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    margin-left: 5px;
+    text-align: center;
+}
+.abutton{
+    display: inline-block;
+    width: 500px;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    margin-left: 5px;
+    text-align: center;     
+}
+.abutton form{
+    display: inline-block;
+    width: 200px;
+}
+.button{
+    background-color: lightgreen;
+    text-align: center;
+    width: 150px;
+    border-radius: 5px;
+}
+.checkout input{
+    margin-left: 50px;
+}
+h4{
+    display: inline-block;
+    width: 200px;
+    font-size: 12pt;
+}
+#results h2{
+    display: block;
+    text-align: center;
+    width: 400px;
+    margin-left: 420px;
+    margin-top: 50px;
+}
+.resultbox{
+    display: block;
+}

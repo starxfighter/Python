@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'amadon/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Session Words</title>
+</head>
+<body>
+    <div id="results">
+        <h1>Thank you for your business!</h1>
+        <h2>You have ordered {{itemcount}} items for a total of ${{totalamt}}</h2>
+        <h3>Your consists of the following: </h3>
+        <form action='/clear/' method='post'>
+            {% csrf_token %}
+            <div>
+                {% for e in request.session.Products %}
+                    <div class='resultbox'>
+                        <h4>{{e.itemname}}</h4>
+                        <h4>{{e.price}}</h4>
+                        <h4>{{e.count}}</h4>
+                    </div>
+                {% endfor %}
+            </div>
+            <input class='button' type='submit' value="Clear Session">
+        </form>
+    </div>
+</body>
+</html>
