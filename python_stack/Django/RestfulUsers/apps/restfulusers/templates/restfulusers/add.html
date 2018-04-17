@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'restfulusers/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'restfulusers/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Add User</title>
+</head>
+<body>
+    <h1>Add a new user</h1>
+    <form action='/restfulusers/create/' method='post'>
+        {% csrf_token %}
+        <input type='hidden' name='user_id'>
+        <h5>First Name:</h5>
+        <input type='text' name='first_name' id='first_name'>
+        <h5>last Name:</h5>
+        <input type='text' name='last_name' id='last_name'>
+        <h5>E-Mail:</h5>
+        <input type='email' name='email' id='email'>
+
+        <input class="button" type='submit' value='Add New'>
+    </form>
+    <a href="/restfulusers/" class='addlink'><button>Go Back</button></a>
+</body>
+</html>

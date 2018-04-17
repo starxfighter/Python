@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'restfulusers/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'restfulusers/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Users Index</title>
+</head>
+<body>
+    <div id='wrapper'>
+        <h1>Users</h1>
+        <div class="userbox">
+            <div class='title'>
+                <h2>ID</h2>
+                <h2>Full Name</h2>
+                <h2>E-Mail</h2>
+                <h2>Created At</h2>
+                <h2>Actions</h2>
+            </div>
+            {% for u in users %}
+                <div class="userline">
+                    <h3>{{u.id}}</h3>
+                    <h3>{{u.first_name}} {{u.last_name}}</h3>
+                    <h3>{{u.email}}</h3>
+                    <h3>{{u.created_at}}</h3>
+                    <div class='actions'>
+                            <a href="/restfulusers/{{u.id}}"><button>Show</button></a>
+                            <a href="/restfulusers/{{u.id}}/edit"><button>Edit</button></a>
+                            <a href="/restfulusers/{{u.id}}/destroy"><button>Delete</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div>
+        <a href="/restfulusers/add" class="addlink"><button>Create User</button></a>
+    </div>
+</body>
+</html>
