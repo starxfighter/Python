@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render, redirect
-from models import *
+from .models import *
 from django.contrib import messages
 import bcrypt
 
@@ -40,7 +40,7 @@ def register_account(request):
         birthday = str(request.POST['birthday_year']) + "-" + str(request.POST['birthday_month']) + "-" + str(request.POST['birthday_day'])
         password = bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt())
         new_user = User.objects.create(first_name = first_name, last_name = last_name, email = email, birthday = birthday)
-        Password.objects.create(pwd = password, user = User.objects.get(id = new_user.id))
+        Password.objects.create(pwd = password.decode('utf-8'), user = User.objects.get(id = new_user.id))
         request.session['user_id'] = new_user.id
     return redirect ('/')
 
@@ -50,12 +50,12 @@ def logout(request):
 
 def login(request):
     user = User.objects.filter(email = request.POST['email'])
-    print user
     if not len(user):
         messages.error(request, "Your email is incorrect.")
         return redirect('/')
     else:
         user = User.objects.filter(email = request.POST['email'])[0]
+        print(request.POST['password'])
         password = bcrypt.checkpw(request.POST['password'].encode(), user.password.pwd.encode())
         if password == True:
             request.session['user_id'] = user.id
