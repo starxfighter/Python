@@ -1,0 +1,51 @@
+h1{
+    color: Blue;
+    font-size: 36pt;
+    text-align: center;
+}
+ul{
+    color: red;
+}
+.formentry{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+h5{
+    font-size: 16pt;
+    text-decoration: underline;
+    color: lightseagreen;
+    margin-top: 20px;
+}
+.input{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+table, th, td{
+    border-color: black;
+    border-style: solid;
+    border-width: 3px;
+    text-align: center;
+    font-size: 16pt;
+}
+.data{
+    font-size: 12pt;
+    text-align: center;
+    width: 300px;
+}
+h4{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.actions{
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.redbtn{
+    background-color: red;
+    color: red;
+}
+.actions a{
+    background-color: red;
+    margin-left: 20px;
+}
