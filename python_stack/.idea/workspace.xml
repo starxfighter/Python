@@ -65,27 +65,6 @@
               <item name="python_stack" type="462c0819:PsiDirectoryNode" />
               <item name="Django" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="python_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Django" type="462c0819:PsiDirectoryNode" />
-              <item name="BeltReviewer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Django" type="462c0819:PsiDirectoryNode" />
-              <item name="BeltReviewer" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_stack" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_stack" type="462c0819:PsiDirectoryNode" />
-              <item name="Django" type="462c0819:PsiDirectoryNode" />
-              <item name="BeltReviewer" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="beltreviewer" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -158,6 +137,52 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/booksAuthors/apps/booksauthors/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/booksAuthors/apps/booksauthors/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/booksAuthors/apps/booksauthors/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/LikesBooks/apps/likesbooks/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Django/LikesBooks/apps/likesbooks/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
