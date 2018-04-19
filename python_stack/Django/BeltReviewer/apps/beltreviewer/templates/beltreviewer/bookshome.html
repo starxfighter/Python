@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'courses/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'courses/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Books Home</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Hello {{user.first_name}}</h1>
+        <a href="/add"><button>Add Book and Review</button></a>
+        <a href="/logout_user"><button>Logout</button></a>
+    </div>
+    <div class="Rreviews">
+        <h2>Recent Book Reviews:</h2>
+        {% for e in newRev %}
+            <div>
+                <h5><a href="/book/{{e.bookrev.id}}">{{e.bookrev.title}}</a></h5>
+                <h5>Rating: {{e.rating}} stars</h5>
+                {% if e.rating  == 5 %}
+                    <p>&#9762;&#9762;&#9762;&#9762;&#9762;</p>
+                {% elif e.rating == 4 %}
+                    <p>&#9762;&#9762;&#9762;&#9762;&#9763;</p>
+                {% elif e.rating == 3 %}
+                    <p>&#9762;&#9762;&#9762;&#9763;&#9763;</p>
+                {% elif e.rating == 2 %}
+                    <p>&#9762;&#9762;&#9763;&#9763;&#9763;</p>
+                {% elif e.rating == 1 %}
+                    <p>&#9762;&#9763;&#9763;&#9763;&#9763;</p>
+                {% endif %}
+                <p>{{e.reviewer.first_name}} says: {{e.review_detail}}</p>
+                <h5>Posted on: {{e.created_at}}</h5>
+            </div>
+        {% endfor %}
+    </div>
+    <div clas="Oreviews">
+        <h2>Other Books with Reviews:</h2>
+        {% for e in otrRev %}
+            <div>
+                <h5><a href="/book/{{e.bookrev.id}}">{{e.bookrev.title}}</a></h5>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'courses/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'courses/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>User Reviews</title>
+</head>
+<body>
+    <div id="header">
+        <h1>Hello {{user.first_name}}</h1>
+        <a href="/home"><button>Home</button></a>
+        <a href="/add"><button>Add Book and Review</button></a>
+        <a href="/logout_user"><button>Logout</button></a>
+    </div>
+    <div>
+        <h1>User: {{user.first_name}} {{user.last_name}}</h1>
+        <h2>E-Mail: {{user.email}}</h2>
+        <h2>Total number of reviews: {{countReviews}}</h2>
+    </div>
+    <div>
+        <h2>Posted reviews for the following books:</h2>
+        {% for r in reviewedBooks %}
+        <h3>{{r.bookrev.title}}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>

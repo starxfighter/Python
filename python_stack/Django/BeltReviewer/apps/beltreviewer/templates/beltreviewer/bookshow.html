@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'courses/css/reset.css' %}" media="screen" title="no title"  charset="utf-8">
+    <link rel="stylesheet" href="{% static 'courses/css/style.css' %}" media="screen" title="no title"  charset="utf-8">
+    <title>Books Show</title>
+</head>
+<body>
+    <div id="header">
+        <a href="/home"><button>Home</button></a>
+        <a href="/logout_user"><button>Logout</button></a>
+    </div>
+    <div class="BReviews">
+        <h1>Title: {{book.title}}</h1>
+        <h2>Author: {{book.author}}</h2>
+        <h2>Recent Reviews:</h2>
+        <div class='recRev'>
+            {% for r in all_reviews %}
+                <div class='bookreview'>
+                    <h4>Rating: {{r.rating}}</h4>
+                    {% if r.rating  == 5 %}
+                        <p>&#9762;&#9762;&#9762;&#9762;&#9762;</p>
+                    {% elif r.rating == 4 %}
+                        <p>&#9762;&#9762;&#9762;&#9762;&#9763;</p>
+                    {% elif r.rating == 3 %}
+                        <p>&#9762;&#9762;&#9762;&#9763;&#9763;</p>
+                    {% elif r.rating == 2 %}
+                        <p>&#9762;&#9762;&#9763;&#9763;&#9763;</p>
+                    {% elif r.rating == 1 %}
+                        <p>&#9762;&#9763;&#9763;&#9763;&#9763;</p>
+                    {% endif %}
+                    <h4><a href="/users/{{user.id}}">{{r.reviewer.first_name}}</a> says: {{r.review_detail}}</h4>
+                    <h3>Posted on: {{r.created_at}}</h3>
+                    {% if request.session.user_id == r.reviewer.id %}
+                        <a href="/destroy/{{r.id}}">Delete this review</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="add_a_review">
+            <h2>Add review:</h2>
+            <div id="bookreview">
+                <form action='/addReview' method='post'>
+                    {% csrf_token %}
+                    <input type="hidden" name="book_id" value="{{book.id}}">
+                    <input type="text" name="addreview">
+                    Rating:
+                    <select name='rating'>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    stars.
+                    <input type='submit' value='Submit Review'/>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
